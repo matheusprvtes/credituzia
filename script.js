@@ -183,21 +183,4 @@
     });
   }
 
-  /* -------- Conversion Tracking -------- */
-  const ctaButtons = document.querySelectorAll('.btn');
-  ctaButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      // Google Ads Conversion
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-17041495312/LrZ3CNme6-EbEJCqgr4_'
-        });
-      }
-      
-      // Meta Pixel Lead
-      if (typeof window.fbq === 'function') {
-        window.fbq('track', 'Lead');
-      }
-    });
-  });
 })();
